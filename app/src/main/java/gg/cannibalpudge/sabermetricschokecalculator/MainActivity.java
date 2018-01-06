@@ -48,10 +48,14 @@ public class MainActivity extends AppCompatActivity {
 
     //---------------------truncate string -> int-----------------------//
 
-        checkInput(message1);
-        checkInput(message2);
-        checkInput(message3);
-        checkInput(message4);
+        message1 = checkInput(message1);
+        System.out.println(message1);
+        message2 = checkInput(message2);
+        System.out.println(message2);
+        message3 = checkInput(message3);
+        System.out.println(message3);
+        message4 = checkInput(message4);
+        System.out.println(message4);
 
 //        if(message2 == null) {
 //            message2 = 0;
@@ -107,8 +111,10 @@ public class MainActivity extends AppCompatActivity {
 //        return true;
 //    }
 
-    String checkInput(String input){
+    public String checkInput(String input){
         if(input != null) {
+            return input;
+        }else if(input != "") {
             return input;
         }else{
             String var = "0";
