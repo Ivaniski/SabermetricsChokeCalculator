@@ -69,10 +69,10 @@ public class MainActivity extends AppCompatActivity {
     //---------------------------sabermetrics-----------------------------//
 
         int res1 = result2 - result1;
-        res1 = res1 * 120;
+        res1 = res1 * 12;
         int res2 = result3 - result4;
-        res2 = res2 * 200;
-        
+        res2 = res2 * 20;
+
         int answer = res1 + res2;
 
     //----------------------truncate int -> string------------------------//
