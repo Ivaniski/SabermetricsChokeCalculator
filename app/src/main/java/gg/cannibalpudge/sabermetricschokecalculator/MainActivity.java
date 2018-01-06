@@ -54,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
         message3 = checkInput(message3);
         message4 = checkInput(message4);
 
-
         String number1 = message1;
         int result1 = Integer.parseInt(number1);
 
@@ -69,7 +68,12 @@ public class MainActivity extends AppCompatActivity {
 
     //---------------------------sabermetrics-----------------------------//
 
-        int answer = result1 + result2 + result3 + result4;
+        int res1 = result2 - result1;
+        res1 = res1 * 120;
+        int res2 = result3 - result4;
+        res2 = res2 * 200;
+        
+        int answer = res1 + res2;
 
     //----------------------truncate int -> string------------------------//
 
