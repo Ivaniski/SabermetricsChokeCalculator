@@ -46,55 +46,15 @@ public class MainActivity extends AppCompatActivity {
         EditText editTextMine4 = (EditText) findViewById(R.id.editText5);
         String message4 = editTextMine4.getText().toString();
 
-        if (message1.matches("")) {
-            message1 = "0";
-            System.out.println("message 1 was null and now is 0");
-        }
-        if (message2.matches("")) {
-            message2 = "0";
-            System.out.println("message 2 was null and now is 0");
-
-        }
-        if (message3.matches("")) {
-            message3 = "0";
-            System.out.println("message 3 was null and now is 0");
-
-        }
-        if (message4.matches("")) {
-            message4 = "0";
-            System.out.println("message 4 was null and now is 0");
-
-        }
 
     //---------------------truncate string -> int-----------------------//
 
         message1 = checkInput(message1);
-        System.out.println(message1);
         message2 = checkInput(message2);
-        System.out.println(message2);
         message3 = checkInput(message3);
-        System.out.println(message3);
         message4 = checkInput(message4);
-        System.out.println(message4);
 
-//        if(message2 == null) {
-//            message2 = 0;
-//        }else{
-//            return message2;
-//        }
-//
-//        if(message3 == null) {
-//            message3 = 0;
-//        }else{
-//            return message3;
-//        }
-//
-//        if(message4 == null) {
-//            message4 = 0;
-//        }else{
-//            return message4;
-//        }
-//
+
         String number1 = message1;
         int result1 = Integer.parseInt(number1);
 
@@ -123,24 +83,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
-//    private boolean isEmpty(EditText etText) {
-//        if (etText.getText().toString().trim().length() > 0)
-//            return false;
-//
-//        return true;
-//    }
-
     public String checkInput(String input){
-        if(input != null) {
-            return input;
-        }else if(input != "") {
-            return input;
-        }else{
-            String var = "0";
-            System.out.println(var);
-            return var;
+        if (input.matches("")) {
+            input = "0";
         }
+        return input;
     }
 }
 
