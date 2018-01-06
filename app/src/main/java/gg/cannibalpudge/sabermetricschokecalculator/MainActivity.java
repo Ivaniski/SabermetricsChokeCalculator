@@ -47,10 +47,11 @@ public class MainActivity extends AppCompatActivity {
         String message4 = editTextMine4.getText().toString();
 
     //---------------------truncate string -> int-----------------------//
-//
-
 
         checkInput(message1);
+        checkInput(message2);
+        checkInput(message3);
+        checkInput(message4);
 
 //        if(message2 == null) {
 //            message2 = 0;
@@ -84,8 +85,6 @@ public class MainActivity extends AppCompatActivity {
 
     //---------------------------sabermetrics-----------------------------//
 
-
-
         int answer = result1 + result2 + result3 + result4;
 
     //----------------------truncate int -> string------------------------//
@@ -109,14 +108,12 @@ public class MainActivity extends AppCompatActivity {
 //    }
 
     String checkInput(String input){
-        if(input != "") {
+        if(input != null) {
             return input;
         }else{
-            String number = input;
-            int result = Integer.parseInt(number);
-            result = 0;
-            String output = Integer.toString(result);
-            return output;
+            String var = "0";
+            System.out.println(var);
+            return var;
         }
     }
 }
